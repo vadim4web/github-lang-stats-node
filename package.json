@@ -1,0 +1,40 @@
+{
+  "name": "github-lang-stats-node",
+  "version": "1.0.0",
+  "description": "📊 GitHub Lang Stats — instantly enrich your <USERNAME> repo with language stats. Clone, configure, and push for automatic updates! 🚀 Full setup in README.md.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vadim4web/github-lang-stats-node.git"
+  },
+  "keywords": [
+    "github",
+    "github-api",
+    "github-stats",
+    "github-languages",
+    "language-stats",
+    "github-repo-stats",
+    "nodejs",
+    "express",
+    "api",
+    "badge-generator",
+    "cyclic-deploy"
+  ],
+  "author": "vadim4web",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vadim4web/github-lang-stats-node/issues"
+  },
+  "homepage": "https://github.com/vadim4web/github-lang-stats-node#readme",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "yaml-js": "^0.3.1"
+  }
+}
