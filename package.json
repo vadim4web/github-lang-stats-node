@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run update:langs && node index.js",
     "dev": "nodemon index.js",
-    "update:langs": "node utils/fetchLanguages.js"
+"update:langs": "node -e 'require(\"./utils/fetchLangs\").updateLanguagesJSON()'"
   },
   "repository": {
     "type": "git",
@@ -27,9 +27,6 @@
   ],
   "author": "vadim4web",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vadim4web/github-lang-stats-node/issues"
-  },
   "homepage": "https://github.com/vadim4web/github-lang-stats-node#readme",
   "dependencies": {
     "axios": "^1.7.9",
