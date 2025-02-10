@@ -6,7 +6,8 @@ const { generateRingChart } = require("../views/ringChart");
 function renderView(
   res,
   view,
-  options
+  options,
+  cacheSeconds = 86400 // за замовчуванням 1 день (86400 секунд)
 ) {
 
   res.setHeader('Content-Type', 'image/svg+xml');
