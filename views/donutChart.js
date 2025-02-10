@@ -8,7 +8,7 @@ function generateDonutChart({stats, langs, title, bg, tColor, txtColor}) {
   
     let startAngle = 0;
     let radius = 250;
-    let innerRadius = 180;
+    let innerRadius = 100;
     let centerX = 640, centerY = 360;  // Центруємо по середині
   
     for (const [lang, bytes] of Object.entries(stats)) {
@@ -28,7 +28,7 @@ function generateDonutChart({stats, langs, title, bg, tColor, txtColor}) {
         <path d="M ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} 
                  L ${centerX + innerRadius * Math.cos(startAngle + angle)} ${centerY + innerRadius * Math.sin(startAngle + angle)} 
                  A ${innerRadius} ${innerRadius} 0 ${largeArc} 0 ${centerX + innerRadius * Math.cos(startAngle)} ${centerY + innerRadius * Math.sin(startAngle)} 
-                 Z" fill="${color}" />
+                 Z" fill="${color}" style="filter: drop-shadow(0 0 5px ${color})" />
       `);
   
       // Оновлені координати підписів (далі від графіка)

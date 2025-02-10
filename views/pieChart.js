@@ -24,7 +24,7 @@ function generatePieChart({stats, langs, title, bg, tColor, txtColor}) {
         let textStyle = txtColor === "inherit" ? 'filter: invert(1)' : '';
   
         svgParts.push(`
-            <path d="M ${centerX} ${centerY} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z" fill="${color}" />
+            <path d="M ${centerX} ${centerY} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z" fill="${color}" style="filter: drop-shadow(0 0 5px ${color})" />
         `);
   
         // Визначаємо координати для тексту

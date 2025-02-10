@@ -25,7 +25,7 @@ function generateBarChart({ stats, langs, title, bg, tColor, txtColor }) {
       let textStyle = txtColor === "inherit" ? 'filter: invert(1)' : '';
   
       svgParts.push(`
-        <rect x="${x}" y="${640 - height - 40}" width="${barWidth}" height="${height}" fill="${color}" />
+        <rect x="${x}" y="${640 - height - 40}" width="${barWidth}" height="${height}" fill="${color}" style="filter: drop-shadow(0 0 5px ${color})" />
         <text x="${x + barWidth / 2}" y="${640 - height - 50}" font-size="18" text-anchor="middle" fill="${textFill}" style="${textStyle}">${percentage}%</text>
         <text x="${x + barWidth / 2}" y="620" font-size="18" text-anchor="middle" fill="${textFill}" style="${textStyle}">${lang}</text>
       `);

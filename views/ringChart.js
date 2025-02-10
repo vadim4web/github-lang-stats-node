@@ -30,7 +30,7 @@ function generateRingChart({stats, langs, title, bg, tColor, txtColor}) {
               L ${centerX + innerRadius * Math.cos(startAngle + angle)} ${centerY + innerRadius * Math.sin(startAngle + angle)} 
               A ${innerRadius} ${innerRadius} 0 ${(percentage > 0.5 ? 1 : 0)} 0 
               ${centerX + innerRadius * Math.cos(startAngle)} ${centerY + innerRadius * Math.sin(startAngle)} Z" 
-              fill="${color}"/>
+              fill="${color}" style="filter: drop-shadow(0 0 5px ${color})" />
     `);
 
     // Координати текстових підписів
