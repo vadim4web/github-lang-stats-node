@@ -10,6 +10,8 @@ function renderView(
 ) {
 
   res.setHeader('Content-Type', 'image/svg+xml');
+  // Додаємо кешування у заголовок
+  res.setHeader('Cache-Control', `public, max-age=${cacheSeconds}, s-maxage=${cacheSeconds}, stale-while-revalidate=3600`);
 
   switch (view) {
     case 'bar':
