@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
-const { LANGUAGES_JSON_PATH } = require('./utils/fetchLangs');
+const { updateLanguagesJSON, LANGUAGES_JSON_PATH } = require('./utils/fetchLangs');
 const { fetchStats } = require('./utils/fetchStats');
 const { renderView } = require('./utils/renderView');
 const fs = require('fs');
@@ -20,7 +20,7 @@ app.get('/', async (req, res) => {
         txtColor = "inherit"
     } = req.query;
 
-    // await updateLanguagesJSON();
+    await updateLanguagesJSON();
     const langs = JSON.parse(fs.readFileSync(LANGUAGES_JSON_PATH, 'utf-8'));
 
     const stats = await fetchStats(user);
