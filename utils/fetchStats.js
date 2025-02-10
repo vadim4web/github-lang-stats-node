@@ -9,7 +9,7 @@ const headers = {
     Accept: 'application/vnd.github.v3+json'
 };
 
-async function fetchUserRepos(username) {
+async function fetchRepos(username) {
     try {
         const response = await axios.get(`${GITHUB_API_URL}/users/${username}/repos`, { headers });
         return response.data;
@@ -19,8 +19,8 @@ async function fetchUserRepos(username) {
     }
 }
 
-async function fetchLanguageStats(username) {
-    const repos = await fetchUserRepos(username);
+async function fetchStats(username) {
+    const repos = await fetchRepos(username);
     const stats = {};
 
     for (const repo of repos) {
@@ -33,4 +33,4 @@ async function fetchLanguageStats(username) {
     return stats;
 }
 
-module.exports = { fetchLanguageStats };
+module.exports = { fetchStats };
